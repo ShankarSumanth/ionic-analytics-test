@@ -7,8 +7,10 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  private webWiew: any = window;
 
+  constructor(public navCtrl: NavController) {
+    this.webWiew.AppCenter.Analytics.trackEvent('Home Page loaded');
   }
 
 }
